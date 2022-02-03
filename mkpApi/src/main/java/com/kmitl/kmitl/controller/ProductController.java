@@ -15,18 +15,23 @@ public class ProductController {
 
     private final ProductService productService;
 
-    @PostMapping("admin/product")
-    public ProductDto postProduct(@RequestBody ProductDto productDto){
-        return productService.saveProduct(productDto);
-    }
-
-    @GetMapping("admin/products")
+    @GetMapping("products")
     public List<ProductDto> getProducts(){
         return productService.getAllProducts();
     }
 
+    @PostMapping("admin/product")
+    public ProductDto postAdminProduct(@RequestBody ProductDto productDto){
+        return productService.saveProduct(productDto);
+    }
+
+    @GetMapping("admin/products")
+    public List<ProductDto> getAdminProducts(){
+        return productService.getAllProducts();
+    }
+
     @GetMapping("admin/product/{id}")
-    public ProductDto findProduct(@PathVariable String id){
+    public ProductDto findAdminProduct(@PathVariable String id){
         return productService.findProduct(id);
     }
 }

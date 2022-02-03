@@ -10,13 +10,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AdminMenuComponent } from './admin/admin-menu/admin-menu.component';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
     ProductDetailComponent,
-    AdminMenuComponent
+    AdminMenuComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
